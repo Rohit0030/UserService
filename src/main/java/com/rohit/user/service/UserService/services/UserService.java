@@ -29,10 +29,4 @@ public interface UserService {
     //Update user by id
 //    String updateUser(String userId, String name);
 
-
-
-
-
-
-
 }

@@ -1,10 +1,12 @@
 package com.rohit.user.service.UserService.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
+import org.intellij.lang.annotations.Pattern;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -27,4 +29,7 @@ public class User {
 
     @Column(name = "About")
     private String about;
+
+    @Transient  // @Transient mean this rating entitie does not save in database yeh ignore krdega database me save nhi karega
+    private List<Rating> ratings = new ArrayList<>();
 }
